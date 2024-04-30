@@ -1,5 +1,5 @@
 <div class="mx-3" [formGroup]="form">
-  <label for="name" class="form-label">{{ label }}</label>
+  <label class="form-label">{{ label }}</label>
   <input
     [type]="type"
     class="border border-gray-600 rounded-md w-full p-2"
@@ -7,4 +7,9 @@
     [placeholder]="placeholder"
     [formControlName]="control"
   />
+  <small
+    class="text-red-600"
+    *ngIf="form?.get(control)?.touched && form?.hasError('required')"
+    >{{ invalidError }}</small
+  >
 </div>

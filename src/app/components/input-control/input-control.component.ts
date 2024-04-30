@@ -12,4 +12,5 @@ export class InputControlComponent {
   @Input() placeholder: string = '';
   @Input() type: string = 'text';
   @Input() public form: FormGroup = new FormGroup({});
+  @Input() invalidError: string = '';
 }
