@@ -1,0 +1,18 @@
+{
+  "games": [
+    {
+      "id": "1",
+      "name": "a name",
+      "price": 100,
+      "category": "action",
+      "description": "aaaaaaaa"
+    },
+    {
+      "id": "11",
+      "name": "ewafrewqrfe",
+      "price": 0,
+      "category": "erqwr",
+      "description": "rqwer"
+    }
+  ]
+}

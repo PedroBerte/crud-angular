@@ -2,7 +2,7 @@
   <div class="flex items-center justify-center py-4">
     <p class="text-3xl font-semibold">Cadastro de Games</p>
   </div>
-  <form [formGroup]="gameForm">
+  <form [formGroup]="gameForm" (ngSubmit)="onSubmit()">
     <div class="flex gap-3 flex-col">
       <app-input-control
         label="Nome"
@@ -15,7 +15,7 @@
         label="Preço"
         placeholder="Digite o preço do jogo"
         control="price"
-        type="text"
+        type="number"
         [form]="gameForm"
       ></app-input-control>
       <app-input-control
@@ -40,4 +40,22 @@
       Salvar
     </button>
   </form>
+  <table class="table-auto">
+    <thead>
+      <tr>
+        <th class="px-4 py-2">Nome</th>
+        <th class="px-4 py-2">Preço</th>
+        <th class="px-4 py-2">Categoria</th>
+        <th class="px-4 py-2">Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let game of games">
+        <td class="border px-4 py-2">{{ game.name }}</td>
+        <td class="border px-4 py-2">{{ game.price }}</td>
+        <td class="border px-4 py-2">{{ game.category }}</td>
+        <td class="border px-4 py-2">{{ game.description }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
