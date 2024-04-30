@@ -1,0 +1,43 @@
+<div class="bg-white flex flex-col rounded-md w-[500px] px-4 py-4">
+  <div class="flex items-center justify-center py-4">
+    <p class="text-3xl font-semibold">Cadastro de Games</p>
+  </div>
+  <form [formGroup]="gameForm">
+    <div class="flex gap-3 flex-col">
+      <app-input-control
+        label="Nome"
+        placeholder="Digite o nome do jogo"
+        control="name"
+        type="text"
+        [form]="gameForm"
+      ></app-input-control>
+      <app-input-control
+        label="Preço"
+        placeholder="Digite o preço do jogo"
+        control="price"
+        type="text"
+        [form]="gameForm"
+      ></app-input-control>
+      <app-input-control
+        label="Categoria"
+        placeholder="Digite a categoria do jogo"
+        control="category"
+        type="text"
+        [form]="gameForm"
+      ></app-input-control>
+      <app-input-control
+        label="Descrição"
+        placeholder="Digite uma descrição do jogo"
+        control="description"
+        type="text"
+        [form]="gameForm"
+      ></app-input-control>
+    </div>
+    <button
+      type="submit"
+      class="px-3 py-2 bg-green-500 text-white rounded-md mt-3"
+    >
+      Salvar
+    </button>
+  </form>
+</div>
